@@ -1,4 +1,4 @@
-myApp.controller("CatsController", ["$http", function($http) {
+myApp.controller("ReptilesController", ["$http", function($http) {
     var self = this;
     var key = 'a1dfe9ada8d4bc4c65bf2db882562c29';
     var baseURL = 'http://api.petfinder.com/';
@@ -6,7 +6,7 @@ myApp.controller("CatsController", ["$http", function($http) {
     self.getRandomPet = function() {
         var query = baseURL + 'pet.getRandom';
         query += '?key=' + key;
-        query += '&animal=cat';
+        query += '&animal=reptile';
         query += '&output=basic';
         query += '&format=json';
         console.log('query: ', query);
