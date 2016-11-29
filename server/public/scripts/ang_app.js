@@ -3,17 +3,22 @@ var myApp = angular.module('myApp', ['ngRoute']);
 myApp.config(['$routeProvider', function($routeProvider) {
 
   $routeProvider
-    .when('/play', {
-      templateUrl: '/views/templates/gameview.html',
-      controller: 'GameController',
-      controllerAs: 'game'
+    .when('/dogs', {
+      templateUrl: '/views/templates/dogs.html',
+      controller: 'DogsController',
+      controllerAs: 'dogs'
     })
-    .when('/config', {
-      templateUrl: '/views/templates/configview.html',
-      controller: 'SettingsController',
-      controllerAs: 'settings'
+    .when('/cats', {
+      templateUrl: '/views/templates/cats.html',
+      controller: 'DogsController',
+      controllerAs: 'cats'
+    })
+    .when('/reptiles', {
+      templateUrl: '/views/templates/reptiles.html',
+      controller: 'DogsController',
+      controllerAs: 'reptiles'
     })
     .otherwise({
-      redirectTo: '/play'
+      redirectTo: '/dogs'
     });
 }]);

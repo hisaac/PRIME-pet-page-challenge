@@ -1,11 +1,11 @@
-myApp.controller("fishController", ["$scope", "$http", function($scope, $http) {
+myApp.controller("ReptileController", ["$scope", "$http", function($scope, $http) {
   var key = 'a1dfe9ada8d4bc4c65bf2db882562c29';
   var baseURL = 'http://api.petfinder.com/';
 
   $scope.getRandomPet = function() {
     var query = baseURL + 'pet.getRandom';
     query += '?key=' + key;
-    query += '&animal=barnyard';
+    query += '&animal=reptile';
     query += '&output=basic';
     query += '&format=json';
 
@@ -15,12 +15,6 @@ myApp.controller("fishController", ["$scope", "$http", function($scope, $http) {
 
     $http.jsonp(request).then(function(response) {
       $scope.pet = response.data.petfinder.pet;
-
     });
-
-
-
-
-  }
-
+  };
 }]);
