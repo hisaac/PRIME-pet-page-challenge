@@ -12,7 +12,7 @@ myApp.controller("DogsController", ["$http", function($http) {
         console.log('query: ', query);
 
         var request = encodeURI(query) + '&callback=JSON_CALLBACK';
-
+    
         $http.jsonp(request).then(function(response) {
             self.pet = response.data.petfinder.pet;
             console.log(self.pet);
