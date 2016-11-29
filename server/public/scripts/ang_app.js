@@ -10,12 +10,12 @@ myApp.config(['$routeProvider', function($routeProvider) {
     })
     .when('/cats', {
       templateUrl: '/views/templates/cats.html',
-      controller: 'DogsController',
+      controller: 'CatsController',
       controllerAs: 'cats'
     })
     .when('/reptiles', {
       templateUrl: '/views/templates/reptiles.html',
-      controller: 'DogsController',
+      controller: 'ReptilesController',
       controllerAs: 'reptiles'
     })
     .otherwise({
